@@ -1,7 +1,9 @@
-demo_input = """1abc2
-pqr3stu8vwx
-a1b2c3d4e5f
-treb7uchet"""
+demo_input = ['1abc2',
+              'pqr3stu8vwx',
+              'a1b2c3d4e5f'
+              'treb7uchet']
+
+# https://github.com/ynonp/perion-basic-python-2024-02
 
 def fix_calibration_value(value: str) -> int:
     """
