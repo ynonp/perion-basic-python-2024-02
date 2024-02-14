@@ -1,6 +1,6 @@
 demo_input = ['1abc2',
               'pqr3stu8vwx',
-              'a1b2c3d4e5f'
+              'a1b2c3d4e5f',
               'treb7uchet']
 
 demo_input_2 = ['two1nine',     # 29
