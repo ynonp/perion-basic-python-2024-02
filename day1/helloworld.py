@@ -64,6 +64,11 @@ print("and what's your favorite number?")
 favorite_number = int(input())
 print(f"I like this one because when you add 1 you get: {favorite_number + 1}")
 
+story = """wow I type
+multi line strings
+so every newline will be
+a real new line"""
+
 print(twice("hello"))
 
 """
