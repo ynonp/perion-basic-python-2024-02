@@ -67,8 +67,10 @@ def to_list_of_digits_3(calibration_value):
 
 # print(to_list_of_digits_3("abcone2threexyz"))
 
-print(sum([fix_calibration_value(s) for s in demo_input_2]))
+# print(sum([fix_calibration_value(s) for s in demo_input_2]))
 
+with open('aocday1.txt', encoding='utf8') as f:
+    print(sum([fix_calibration_value(line) for line in f]))
 
 
 
