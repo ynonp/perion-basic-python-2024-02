@@ -9,3 +9,22 @@ game.play(player='O', row=1, column=1)
 # . O .
 # . . .
 print(game)
+
+
+
+# Bonus-
+# Create a Board from an existing image
+start = Board("""
+. X .
+. O .
+. . .
+""")
+
+start.play('O', 2, 2)
+print(start)
+# . X .
+# . O .
+# . . O
+
+
+
