@@ -1,30 +1,27 @@
-class Board:
+import itertools
+from board import Board
+
+class Player:
     ...
 
-game = Board()
-game.play(player='X', row=0, column=1)
-game.play(player='O', row=1, column=1)
-# draws the board:
-# . X .
-# . O .
-# . . .
-print(game)
-
-
+# Ex 1
+# game_over and status only finish on tie
+# play until the board is full
+# Create class Player to make the follwing code work
+# Create data class "Move" to represent a move in the game (player + row + column)
 
 # Bonus-
-# Create a Board from an existing image
-start = Board("""
-. X .
-. O .
-. . .
-""")
+# Apply game rules
 
-start.play('O', 2, 2)
-print(start)
-# . X .
-# . O .
-# . . O
+board = Board()
+players = itertools.cycle[Player('X'), Player('O')]
 
+while not board.game_over():
+    player = next(players)
+    move = player.get_next_move(board)
+    board.play(move)
 
+# status ->
+# prints either "X Won", "O Won" or "Tie"
+print(board.status())
 
