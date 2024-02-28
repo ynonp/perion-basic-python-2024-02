@@ -14,7 +14,7 @@ class Player:
 # Apply game rules
 
 board = Board()
-players = itertools.cycle[Player('X'), Player('O')]
+players = itertools.cycle([Player('X'), Player('O')])
 
 while not board.game_over():
     player = next(players)
