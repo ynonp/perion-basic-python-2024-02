@@ -1,3 +1,11 @@
+from dataclasses import dataclass
+
+@dataclass(frozen=True)
+class Move:
+    player: str
+    row: int
+    column: int
+
 class Board:
     grid = [['.', '.', '.'],
             ['.', '.', '.'],
@@ -7,12 +15,15 @@ class Board:
         if initial_state is not None:
             self.grid = Board.read_grid_from_string(initial_state)
 
-    def play(self, player, row, column):
-        self.grid[row][column] = player
+    def play(self, move):
+        self.grid[move.row][move.column] = move.player
 
     def __str__(self):
         return '\n'.join(
             ' '.join(row) for row in self.grid)
+
+    def game_over(self):
+        return '.' not in str(self)
 
     @staticmethod
     def read_grid_from_string(grid_string):

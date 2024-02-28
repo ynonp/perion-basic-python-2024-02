@@ -1,8 +1,6 @@
 import itertools
 from board import Board
-
-class Player:
-    ...
+from player import Player
 
 # Ex 1
 # game_over and status only finish on tie
